@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="nl" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>De Verfwacht | Schilderwerken - Betrouwbaar vakmanschap</title>
+    <meta name="description" content="De Verfwacht Schilderwerken - 18 jaar ervaring in binnen- en buitenschilderwerk, wandafwerking, glaszetten en meer. Betrouwbaar vakmanschap voor een betaalbare prijs!">
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="stylesheet" href="css/custom.css">
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface": "#121414",
+                        "surface-dim": "#121414",
+                        "surface-bright": "#38393a",
+                        "surface-container-lowest": "#0c0f0f",
+                        "surface-container-low": "#1a1c1c",
+                        "surface-container": "#1e2020",
+                        "surface-container-high": "#282a2b",
+                        "surface-container-highest": "#333535",
+                        "on-surface": "#e2e2e2",
+                        "on-surface-variant": "#d2c5b2",
+                        "outline": "#9b8f7e",
+                        "outline-variant": "#4f4538",
+                        "surface-tint": "#efbf69",
+                        "primary": "#efbf69",
+                        "on-primary": "#422d00",
+                        "primary-container": "#b88d3c",
+                        "on-primary-container": "#3d2900",
+                        "secondary": "#e8c172",
+                        "on-secondary": "#402d00",
+                        "secondary-container": "#614700",
+                        "on-secondary-container": "#dcb769",
+                        "tertiary": "#bcc6e1",
+                        "on-tertiary": "#263046",
+                        "tertiary-container": "#8a94ae",
+                        "on-tertiary-container": "#222d42",
+                        "error": "#ffb4ab",
+                        "on-error": "#690005",
+                        "deep-navy-surface": "#0b162a",
+                        "navy-elevated": "#14223d",
+                        "gold-shimmer": "#e4be6f",
+                        "gold-shadow": "#8e6d2e",
+                    },
+                    fontFamily: {
+                        "cinzel": ["Cinzel", "serif"],
+                        "manrope": ["Manrope", "sans-serif"],
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "section-gap-lg": "120px",
+                        "section-gap-md": "80px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                    },
+                    maxWidth: {
+                        "container-max": "1280px",
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        body { font-family: 'Manrope', sans-serif; }
+        .font-cinzel { font-family: 'Cinzel', serif; }
+    </style>
+</head>
+<body class="bg-deep-navy-surface text-on-surface overflow-x-hidden">
+
+<!-- Header -->
+<header class="fixed top-0 w-full border-b border-primary/30 bg-surface/95 backdrop-blur-md z-50">
+    <div class="flex justify-between items-center px-6 py-4 max-w-container-max mx-auto">
+        <a href="index.html" class="flex items-center gap-3">
+            <img src="images/logo.jpeg" alt="De Verfwacht Logo" class="h-10 w-auto">
+            <span class="font-cinzel text-xl text-primary tracking-widest hidden sm:block font-semibold">De Verfwacht</span>
+        </a>
+        <nav class="hidden md:flex gap-8">
+            <a href="index.html" class="text-xs font-bold uppercase tracking-[0.15em] text-primary border-b-2 border-primary pb-1">Home</a>
+            <a href="diensten.html" class="text-xs font-bold uppercase tracking-[0.15em] text-on-surface hover:text-primary transition-colors">Diensten</a>
+            <a href="over-ons.html" class="text-xs font-bold uppercase tracking-[0.15em] text-on-surface hover:text-primary transition-colors">Over Ons</a>
+            <a href="projecten.html" class="text-xs font-bold uppercase tracking-[0.15em] text-on-surface hover:text-primary transition-colors">Projecten</a>
+            <a href="contact.html" class="text-xs font-bold uppercase tracking-[0.15em] text-on-surface hover:text-primary transition-colors">Contact</a>
+        </nav>
+        <a href="contact.html" class="bg-primary text-on-primary text-xs font-bold uppercase tracking-[0.15em] px-6 py-2.5 hover:bg-gold-shimmer transition-colors hidden sm:block">Direct Offerte</a>
+        <button id="mobile-menu-btn" class="md:hidden text-primary material-symbols-outlined text-3xl">menu</button>
+    </div>
+    <!-- Mobile Nav -->
+    <div id="mobile-nav" class="fixed inset-y-0 right-0 w-64 bg-surface border-l border-primary/30 transform translate-x-full transition-transform duration-300 md:hidden z-50">
+        <div class="p-6">
+            <button id="mobile-menu-close" class="text-primary material-symbols-outlined text-3xl mb-8">close</button>
+            <nav class="flex flex-col gap-6">
+                <a href="index.html" class="text-sm font-bold uppercase tracking-[0.15em] text-primary">Home</a>
+                <a href="diensten.html" class="text-sm font-bold uppercase tracking-[0.15em] text-on-surface hover:text-primary transition-colors">Diensten</a>
+                <a href="over-ons.html" class="text-sm font-bold uppercase tracking-[0.15em] text-on-surface hover:text-primary transition-colors">Over Ons</a>
+                <a href="projecten.html" class="text-sm font-bold uppercase tracking-[0.15em] text-on-surface hover:text-primary transition-colors">Projecten</a>
+                <a href="contact.html" class="text-sm font-bold uppercase tracking-[0.15em] text-on-surface hover:text-primary transition-colors">Contact</a>
+                <a href="contact.html" class="bg-primary text-on-primary text-xs font-bold uppercase tracking-[0.15em] px-6 py-3 text-center mt-4">Direct Offerte</a>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="pt-[72px]">
+
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+        <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1920&q=80" 
+             alt="Professioneel schilderwerk" 
+             class="w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-gradient-to-b from-deep-navy-surface/60 via-deep-navy-surface/30 to-deep-navy-surface"></div>
+    </div>
+    <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+        <div class="inline-block border border-primary/30 px-4 py-1 mb-6 rounded-full bg-navy-elevated/50 backdrop-blur-sm">
+            <span class="text-xs font-bold uppercase tracking-[0.15em] text-primary">18 Jaar Ervaring</span>
+        </div>
+        <h1 class="font-cinzel text-4xl md:text-5xl lg:text-6xl text-white mb-6 uppercase leading-tight tracking-wide">
+            Meesters in <span class="text-primary">Schilderwerken</span>
+        </h1>
+        <p class="text-lg md:text-xl text-on-surface-variant max-w-2xl mx-auto mb-10 leading-relaxed">
+            Betrouwbaar vakmanschap voor een betaalbare prijs! Met oog voor detail en een sterke focus op de klant leveren wij strak en duurzaam schilderwerk waar u jarenlang plezier van heeft.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="projecten.html" class="bg-primary text-on-primary text-xs font-bold uppercase tracking-[0.15em] px-10 py-4 hover:bg-gold-shimmer transition-all duration-300 shadow-lg shadow-primary/20 text-center">
+                Bekijk Onze Projecten
+            </a>
+            <a href="diensten.html" class="border border-primary text-primary text-xs font-bold uppercase tracking-[0.15em] px-10 py-4 hover:bg-primary/10 transition-all duration-300 text-center">
+                Onze Diensten
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Showcase Grid (Bento) -->
+<section class="py-24 px-6 max-w-container-max mx-auto">
+    <div class="text-center mb-16">
+        <h2 class="font-cinzel text-2xl md:text-3xl text-primary uppercase mb-2 tracking-wide">Exclusief Werk</h2>
+        <div class="pinstripe max-w-xs mx-auto mb-4"></div>
+        <p class="text-on-surface-variant">Ontdek de transformatie van onze projecten</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[700px]">
+        <!-- Main Feature -->
+        <div class="md:col-span-8 md:row-span-2 group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500">
+            <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=1200&q=80" 
+                 alt="Schilderwerk buiten" 
+                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
+            <div class="absolute bottom-0 left-0 p-8">
+                <h3 class="font-cinzel text-xl text-white mb-2 tracking-wide">Buitenschilderwerk</h3>
+                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Bescherming &amp; Renovatie</p>
+            </div>
+        </div>
+        <!-- Side Feature 1 -->
+        <div class="md:col-span-4 group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" 
+                 alt="Interieur schilderwerk" 
+                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
+            <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="font-cinzel text-lg text-white tracking-wide">Interieur Perfectie</h3>
+                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Wandafwerking &amp; Behang</p>
+            </div>
+        </div>
+        <!-- Side Feature 2 -->
+        <div class="md:col-span-4 group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" 
+                 alt="Houtrot reparatie" 
+                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
+            <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="font-cinzel text-lg text-white tracking-wide">Restauratie</h3>
+                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Houtrot &amp; Beglazing</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="bg-navy-elevated py-20">
+    <div class="max-w-container-max mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+            <div class="max-w-xl">
+                <h2 class="font-cinzel text-2xl md:text-3xl text-primary uppercase mb-4 tracking-wide">Onze Expertise</h2>
+                <p class="text-on-surface-variant text-lg">Wij bieden een totaalpakket voor het onderhoud en de verfraaiing van uw woning of bedrijfspand.</p>
+            </div>
+            <a href="diensten.html" class="border border-primary/50 text-primary px-8 py-3 text-xs font-bold uppercase tracking-[0.15em] hover:bg-primary hover:text-on-primary transition-all text-center">
+                Alle Diensten
+            </a>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Service Card 1 -->
+            <div class="bg-deep-navy-surface p-8 border-t-2 border-primary hover:bg-surface-container transition-colors group card-gold-accent">
+                <span class="material-symbols-outlined text-primary text-4xl mb-6 group-hover:scale-110 transition-transform inline-block">format_paint</span>
+                <h4 class="font-cinzel text-xl text-white mb-4 tracking-wide">Schilderwerk</h4>
+                <p class="text-on-surface-variant mb-6 text-sm">Zowel binnen- als buitenschilderwerk van het hoogste niveau met premium verfsoorten.</p>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2 text-xs text-on-surface"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span> Binnen- &amp; buiten</li>
+                    <li class="flex items-center gap-2 text-xs text-on-surface"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span> Lakwerk</li>
+                </ul>
+            </div>
+            <!-- Service Card 2 -->
+            <div class="bg-deep-navy-surface p-8 border-t-2 border-primary hover:bg-surface-container transition-colors group card-gold-accent">
+                <span class="material-symbols-outlined text-primary text-4xl mb-6 group-hover:scale-110 transition-transform inline-block">wallpaper</span>
+                <h4 class="font-cinzel text-xl text-white mb-4 tracking-wide">Wandafwerking</h4>
+                <p class="text-on-surface-variant mb-6 text-sm">Van strak texwerk tot exclusief behang voor een unieke sfeer in elke ruimte.</p>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2 text-xs text-on-surface"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span> Behangwerk</li>
+                    <li class="flex items-center gap-2 text-xs text-on-surface"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span> Texwerk</li>
+                </ul>
+            </div>
+            <!-- Service Card 3 -->
+            <div class="bg-deep-navy-surface p-8 border-t-2 border-primary hover:bg-surface-container transition-colors group card-gold-accent">
+                <span class="material-symbols-outlined text-primary text-4xl mb-6 group-hover:scale-110 transition-transform inline-block">window</span>
+                <h4 class="font-cinzel text-xl text-white mb-4 tracking-wide">Glas &amp; Kozijn</h4>
+                <p class="text-on-surface-variant mb-6 text-sm">Glaszetten en vakkundige houtrot reparaties om uw kozijnen weer als nieuw te maken.</p>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2 text-xs text-on-surface"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span> Houtrot reparatie</li>
+                    <li class="flex items-center gap-2 text-xs text-on-surface"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span> Isolatieglas</li>
+                </ul>
+            </div>
+            <!-- Service Card 4 -->
+            <div class="bg-deep-navy-surface p-8 border-t-2 border-primary hover:bg-surface-container transition-colors group card-gold-accent">
+                <span class="material-symbols-outlined text-primary text-4xl mb-6 group-hover:scale-110 transition-transform inline-block">construction</span>
+                <h4 class="font-cinzel text-xl text-white mb-4 tracking-wide">Onderhoud</h4>
+                <p class="text-on-surface-variant mb-6 text-sm">Vloercoating en kitwerkzaamheden voor een duurzame bescherming van uw oppervlakken.</p>
+                <ul class="space-y-2">
+                    <li class="flex items-center gap-2 text-xs text-on-surface"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span> Vloercoating</li>
+                    <li class="flex items-center gap-2 text-xs text-on-surface"><span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">star</span> Kitwerk</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-24 px-6 max-w-container-max mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div>
+            <h2 class="font-cinzel text-2xl md:text-3xl text-primary mb-4 uppercase tracking-wide">Waarom De Verfwacht?</h2>
+            <div class="pinstripe-divider mb-6 w-24"></div>
+            <p class="text-lg text-on-surface-variant mb-6 leading-relaxed">
+                De Verfwacht Schilderwerken staat voor vakmanschap, betrouwbaarheid en kwaliteit. Met 18 jaar ervaring werk ik met plezier, oog voor detail en een sterke focus op de klant.
+            </p>
+            <ul class="space-y-4 mb-8">
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="text-on-surface-variant">Eerlijk advies en duidelijke afspraken</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="text-on-surface-variant">Strak en duurzaam schilderwerk</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="text-on-surface-variant">Kwaliteit en tevreden klanten op de eerste plaats</span>
+                </li>
+                <li class="flex items-start gap-3">
+                    <span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+                    <span class="text-on-surface-variant">Schilderwerk waar u jarenlang plezier van heeft</span>
+                </li>
+            </ul>
+            <a href="over-ons.html" class="bg-primary text-on-primary text-xs font-bold uppercase tracking-[0.15em] px-8 py-3 hover:bg-gold-shimmer transition-colors inline-block">
+                Meer Over Ons
+            </a>
+        </div>
+        <div class="relative aspect-square md:aspect-auto h-full min-h-[400px] border border-primary/20 bg-navy-elevated overflow-hidden gold-border-glow transition-all duration-300 card-gold-accent">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80" 
+                 alt="Vakmanschap detail" 
+                 class="w-full h-full object-cover">
+        </div>
+    </div>
+</section>
+
+<!-- Testimonial -->
+<section class="py-24 px-6 max-w-4xl mx-auto text-center">
+    <div class="pinstripe w-full mb-12"></div>
+    <span class="material-symbols-outlined text-primary/40 text-6xl mb-8">format_quote</span>
+    <blockquote class="font-cinzel text-xl md:text-2xl text-primary mb-8 italic tracking-wide leading-relaxed">
+        "Het resultaat overtrof al onze verwachtingen. De aandacht voor detail en de professionele werkwijze maken De Verfwacht de enige keuze voor kwaliteitswerk."
+    </blockquote>
+    <cite class="text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant block">— Tevreden Klant</cite>
+    <div class="pinstripe w-full mt-12"></div>
+</section>
+
+<!-- Contact CTA -->
+<section class="py-20 bg-surface-dim border-t border-primary/20">
+    <div class="max-w-container-max mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+            <h2 class="font-cinzel text-2xl md:text-3xl text-white mb-6 uppercase tracking-wide">Vraag een <span class="text-primary">Vrijblijvende Offerte</span> aan</h2>
+            <p class="text-on-surface-variant mb-10 text-lg">Ontvang binnen 48 uur een gespecificeerd voorstel voor uw schilder- of renovatieproject.</p>
+            <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                    <div class="bg-primary/10 p-3 rounded border border-primary/30">
+                        <span class="material-symbols-outlined text-primary">phone</span>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold uppercase tracking-[0.15em] text-primary">Telefoon</p>
+                        <p class="text-white font-cinzel text-lg tracking-wide">06 474 04 888</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="bg-primary/10 p-3 rounded border border-primary/30">
+                        <span class="material-symbols-outlined text-primary">mail</span>
+                    </div>
+                    <div>
+                        <p class="text-xs font-bold uppercase tracking-[0.15em] text-primary">E-mail</p>
+                        <p class="text-white font-cinzel text-lg tracking-wide">info@deverfwacht.nl</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-navy-elevated p-10 rounded-lg border border-primary/20 relative overflow-hidden card-gold-accent">
+            <h4 class="font-cinzel text-xl text-primary mb-6 uppercase tracking-wide">Contacteer Ons</h4>
+            <form action="mailto:info@deverfwacht.nl" method="post" enctype="text/plain" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-[0.15em] text-primary mb-2">Naam</label>
+                        <input type="text" name="naam" class="w-full bg-deep-navy-surface border border-outline-variant text-white p-3 rounded outline-none transition-colors" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-[0.15em] text-primary mb-2">Telefoonnummer</label>
+                        <input type="tel" name="telefoon" class="w-full bg-deep-navy-surface border border-outline-variant text-white p-3 rounded outline-none transition-colors" required>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-[0.15em] text-primary mb-2">E-mail</label>
+                    <input type="email" name="email" class="w-full bg-deep-navy-surface border border-outline-variant text-white p-3 rounded outline-none transition-colors" required>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-[0.15em] text-primary mb-2">Projecttype</label>
+                    <select name="project" class="w-full bg-deep-navy-surface border border-outline-variant text-white p-3 rounded outline-none transition-colors">
+                        <option>Binnenschilderwerk</option>
+                        <option>Buitenschilderwerk</option>
+                        <option>Behangwerk</option>
+                        <option>Texwerk</option>
+                        <option>Houtrot reparatie</option>
+                        <option>Overig</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-[0.15em] text-primary mb-2">Uw Bericht</label>
+                    <textarea name="bericht" rows="4" class="w-full bg-deep-navy-surface border border-outline-variant text-white p-3 rounded outline-none transition-colors"></textarea>
+                </div>
+                <button type="submit" class="w-full bg-primary text-on-primary text-xs font-bold uppercase tracking-[0.15em] py-4 hover:bg-gold-shimmer transition-all gold-border-glow">
+                    Aanvraag Verzenden
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-deep-navy-surface border-t border-primary/30">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-16 px-6 py-16 max-w-container-max mx-auto">
+        <div class="space-y-6">
+            <div class="flex items-center gap-3">
+                <img src="images/logo.jpeg" alt="De Verfwacht" class="h-8 w-auto">
+                <span class="font-cinzel text-xl text-primary tracking-widest font-semibold">De Verfwacht</span>
+            </div>
+            <p class="text-on-surface-variant text-sm leading-relaxed">
+                Uw professionele partner voor schilderwerk, wandafwerking en vastgoedonderhoud. 18 jaar ervaring in vakmanschap en kwaliteit.
+            </p>
+        </div>
+        <div>
+            <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-primary mb-6">Diensten</h4>
+            <ul class="space-y-4">
+                <li><a href="diensten.html" class="text-on-surface-variant hover:text-primary transition-transform hover:translate-x-1 inline-block text-sm">Schilderwerk</a></li>
+                <li><a href="diensten.html" class="text-on-surface-variant hover:text-primary transition-transform hover:translate-x-1 inline-block text-sm">Wandafwerking</a></li>
+                <li><a href="diensten.html" class="text-on-surface-variant hover:text-primary transition-transform hover:translate-x-1 inline-block text-sm">Glas &amp; Kozijn</a></li>
+                <li><a href="diensten.html" class="text-on-surface-variant hover:text-primary transition-transform hover:translate-x-1 inline-block text-sm">Onderhoud</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4 class="text-xs font-bold uppercase tracking-[0.15em] text-primary mb-6">Contact</h4>
+            <address class="not-italic text-on-surface-variant space-y-4 text-sm">
+                <p class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-sm">phone</span>
+                    06 474 04 888
+                </p>
+                <p class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-sm">mail</span>
+                    info@deverfwacht.nl
+                </p>
+                <p class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-sm">badge</span>
+                    KvK: 99266393
+                </p>
+                <p class="flex items-center gap-3">
+                    <span class="material-symbols-outlined text-primary text-sm">receipt</span>
+                    BTW: NL005378031B18
+                </p>
+            </address>
+        </div>
+    </div>
+    <div class="border-t border-primary/10 py-6 px-6 text-center">
+        <p class="text-on-surface-variant text-xs">&copy; 2024 De Verfwacht Schilderwerken. Alle rechten voorbehouden.</p>
+    </div>
+</footer>
+
+<script>
+    // Mobile menu toggle
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileNav.classList.add('mobile-nav-open');
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+        mobileNav.classList.remove('mobile-nav-open');
+    });
+</script>
+
+</body>
+</html>
