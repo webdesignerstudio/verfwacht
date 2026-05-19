@@ -1,0 +1,14 @@
+# Gevoelige configuratiebestanden — NOOIT in Git opslaan
+smtp_config.php
+site-config.php
+
+# Tijdelijke bestanden
+*.tmp.*
+*.log
+
+# Rate-limit data
+/.rate/
+
+# OS-bestanden
+.DS_Store
+Thumbs.db

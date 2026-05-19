@@ -1,0 +1,30 @@
+# smtpmailersystem — root .htaccess
+
+# Forceer HTTPS
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Geen directory listing
+Options -Indexes
+
+# Blokkeer directe toegang tot gevoelige configuratiebestanden
+<FilesMatch "^(smtp_config|site-config)\.php$">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Blokkeer .env en andere gevoelige bestanden
+<FilesMatch "^\.">
+    Order Allow,Deny
+    Deny from all
+</FilesMatch>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
