@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="icon" type="image/png" href="images/favicon.webp">
     <title>Projecten | De Verfwacht - Onze Realisaties</title>
     <meta name="description" content="Bekijk het portfolio van De Verfwacht Schilderwerken Tilburg. Een selectie van onze schilder- en renovatieprojecten voor particuliere en zakelijke klanten.">
     <meta property="og:title" content="Projecten | De Verfwacht - Onze Realisaties">
     <meta property="og:description" content="Bekijk het portfolio van De Verfwacht Schilderwerken Tilburg. Een selectie van onze schilder- en renovatieprojecten voor particuliere en zakelijke klanten.">
-    <meta property="og:image" content="images/logo.jpeg">
+    <meta property="og:image" content="images/logo.webp">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://deverfwacht.nl/projecten.html">
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/custom.min.css">
     <script>
         tailwind.config = {
             darkMode: "class",
@@ -39,13 +39,14 @@
         }
     </script>
     <style>body { font-family: 'Manrope', sans-serif; } .font-cinzel { font-family: 'Cinzel', serif; }</style>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
 </head>
 <body class="bg-deep-navy-surface text-on-surface">
 
 <header class="fixed top-0 w-full border-b border-primary/30 header-logo-bg z-50">
     <div class="flex justify-between items-center px-6 py-4 max-w-container-max mx-auto">
         <a href="index.html" class="flex items-center gap-3">
-            <img src="images/logo.jpeg" alt="De Verfwacht Logo" class="h-20 w-auto">
+            <img src="images/logo.webp" alt="De Verfwacht Logo" class="h-20 w-auto">
             <span class="font-cinzel text-xl text-primary tracking-widest hidden sm:block font-semibold">De Verfwacht</span>
         </a>
         <nav class="hidden md:flex gap-8">
@@ -78,7 +79,7 @@
 <!-- Hero -->
 <section class="relative h-[400px] flex items-center justify-center overflow-hidden">
     <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80" alt="Projecten" class="w-full h-full object-cover opacity-25">
+        <img src="images/unsplash_interior_1920.webp" alt="Projecten" class="w-full h-full object-cover opacity-25">
         <div class="absolute inset-0 bg-gradient-to-b from-deep-navy-surface/60 via-deep-navy-surface/40 to-deep-navy-surface"></div>
     </div>
     <div class="relative z-10 text-center max-w-container-max px-6 mx-auto">
@@ -99,7 +100,7 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Project 1 -->
         <div class="group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500 aspect-[4/3]">
-            <img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=800&q=80" alt="Buitenschilderwerk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="images/unsplash_painter_800.webp" loading="lazy" alt="Buitenschilderwerk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
                 <h3 class="font-cinzel text-lg text-white tracking-wide">Buitenschilderwerk</h3>
@@ -108,7 +109,7 @@
         </div>
         <!-- Project 2 -->
         <div class="group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500 aspect-[4/3]">
-            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="Interieur" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="images/unsplash_room_800.webp" loading="lazy" alt="Interieur" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
                 <h3 class="font-cinzel text-lg text-white tracking-wide">Interieur Schilderwerk</h3>
@@ -117,7 +118,7 @@
         </div>
         <!-- Project 3 -->
         <div class="group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500 aspect-[4/3]">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80" alt="Restauratie" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="images/unsplash_interior_800.webp" loading="lazy" alt="Restauratie" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
                 <h3 class="font-cinzel text-lg text-white tracking-wide">Houtrot Reparatie</h3>
@@ -126,7 +127,7 @@
         </div>
         <!-- Project 4 -->
         <div class="group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500 aspect-[4/3]">
-            <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" alt="Luxe woning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="images/unsplash_luxe_800.webp" loading="lazy" alt="Luxe woning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
                 <h3 class="font-cinzel text-lg text-white tracking-wide">Luxe Woning</h3>
@@ -135,7 +136,7 @@
         </div>
         <!-- Project 5 -->
         <div class="group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500 aspect-[4/3]">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="Behang" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="images/unsplash_bedroom_800.webp" loading="lazy" alt="Behang" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
                 <h3 class="font-cinzel text-lg text-white tracking-wide">Behangwerk</h3>
@@ -144,7 +145,7 @@
         </div>
         <!-- Project 6 -->
         <div class="group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500 aspect-[4/3]">
-            <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?w=800&q=80" alt="Keuken" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="images/unsplash_kitchen_800.webp" loading="lazy" alt="Keuken" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
                 <h3 class="font-cinzel text-lg text-white tracking-wide">Keuken Schilderwerk</h3>
@@ -173,7 +174,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-16 px-6 py-16 max-w-container-max mx-auto">
         <div class="space-y-6">
             <div class="flex items-center gap-3">
-                <img src="images/logo.jpeg" alt="De Verfwacht" class="h-14 w-auto">
+                <img src="images/logo.webp" alt="De Verfwacht" class="h-14 w-auto">
                 <span class="font-cinzel text-xl text-primary tracking-widest font-semibold">De Verfwacht</span>
             </div>
             <p class="text-on-surface-variant text-sm leading-relaxed">
