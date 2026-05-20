@@ -33,11 +33,11 @@ html, body {
         padding-bottom: 48px !important;
     }
 
-    /* Hero needs enough height for text + buttons */
+    /* Hero: fixed height like diensten.html, minimal own padding */
     main > section:first-child {
-        padding-top: 80px !important;
-        padding-bottom: 40px !important;
-        min-height: 0 !important;
+        padding-top: 16px !important;
+        padding-bottom: 24px !important;
+        min-height: 420px !important;
         height: auto !important;
     }
 
