@@ -83,3 +83,9 @@ input:focus, textarea:focus, select:focus {
     background-color: #152034 !important;
     --tw-bg-opacity: 1 !important;
 }
+
+/* Footer matched to logo background */
+.footer-logo-bg {
+    background-color: #152034 !important;
+    --tw-bg-opacity: 1 !important;
+}
