@@ -33,10 +33,12 @@ html, body {
         padding-bottom: 48px !important;
     }
 
-    /* But keep hero padding for text readability */
+    /* Hero needs enough height for text + buttons */
     main > section:first-child {
-        padding-top: 24px !important;
-        padding-bottom: 24px !important;
+        padding-top: 80px !important;
+        padding-bottom: 40px !important;
+        min-height: 0 !important;
+        height: auto !important;
     }
 
     /* Reduce large internal paddings */
@@ -55,16 +57,10 @@ html, body {
         gap: 16px !important;
     }
 
-    /* ─── 3. Hero heights ─── */
-    /* First section in main is always the hero */
-    main > section:first-child {
-        min-height: auto !important;
-        height: 260px !important;
-    }
-
     /* Position hero image so the painter's face stays visible on mobile */
     main > section:first-child img {
         object-position: 65% center !important;
+        opacity: 0.75 !important;
     }
 
     /* ─── 4. Typography readability ─── */
@@ -141,14 +137,6 @@ html, body {
     }
     .text-3xl {
         font-size: 1.25rem !important;   /* 20px */
-    }
-
-    main > section:first-child {
-        height: 220px !important;
-    }
-
-    main > section:first-child img {
-        object-position: 65% center !important;
     }
 
     /* Stack hero buttons vertically with less padding */
