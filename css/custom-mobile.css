@@ -62,6 +62,11 @@ html, body {
         height: 260px !important;
     }
 
+    /* Position hero image so the painter's face stays visible on mobile */
+    main > section:first-child img {
+        object-position: 65% center !important;
+    }
+
     /* ─── 4. Typography readability ─── */
     .text-4xl {
         font-size: 1.75rem !important;   /* 28px */
@@ -140,6 +145,10 @@ html, body {
 
     main > section:first-child {
         height: 220px !important;
+    }
+
+    main > section:first-child img {
+        object-position: 65% center !important;
     }
 
     /* Stack hero buttons vertically with less padding */
