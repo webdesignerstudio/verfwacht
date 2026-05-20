@@ -77,3 +77,9 @@ input:focus, textarea:focus, select:focus {
 .mobile-nav-open {
     transform: translateX(0) !important;
 }
+
+/* Header matched to logo background */
+.header-logo-bg {
+    background-color: #162235 !important;
+    --tw-bg-opacity: 1 !important;
+}
