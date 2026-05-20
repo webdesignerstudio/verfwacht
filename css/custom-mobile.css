@@ -1,0 +1,151 @@
+/* De Verfwacht — Mobile Overrides */
+/* Loaded after custom.min.css, desktop untouched */
+
+/* ─── 1. Prevent horizontal scroll on all pages ─── */
+html, body {
+    overflow-x: hidden;
+}
+
+/* ─── 2. Header / Main spacing fix ─── */
+@media (max-width: 768px) {
+    /* Header logo smaller */
+    header img.h-20 {
+        height: 48px !important;
+    }
+    footer img.h-14 {
+        height: 36px !important;
+    }
+
+    /* Main needs more top padding because header is ~112px tall */
+    main.pt-\[72px\] {
+        padding-top: 112px !important;
+    }
+
+    /* Reduce overall horizontal padding */
+    .px-6 {
+        padding-left: 16px !important;
+        padding-right: 16px !important;
+    }
+
+    /* Reduce vertical section padding on all sections */
+    section {
+        padding-top: 48px !important;
+        padding-bottom: 48px !important;
+    }
+
+    /* But keep hero padding for text readability */
+    main > section:first-child {
+        padding-top: 24px !important;
+        padding-bottom: 24px !important;
+    }
+
+    /* Reduce large internal paddings */
+    .p-10 {
+        padding: 24px !important;
+    }
+    .p-8 {
+        padding: 20px !important;
+    }
+
+    /* Reduce grid gaps on mobile */
+    .gap-16 {
+        gap: 24px !important;
+    }
+    .gap-8 {
+        gap: 16px !important;
+    }
+
+    /* ─── 3. Hero heights ─── */
+    /* First section in main is always the hero */
+    main > section:first-child {
+        min-height: auto !important;
+        height: 260px !important;
+    }
+
+    /* ─── 4. Typography readability ─── */
+    .text-4xl {
+        font-size: 1.75rem !important;   /* 28px */
+        line-height: 1.2 !important;
+    }
+    .text-3xl {
+        font-size: 1.5rem !important;    /* 24px */
+        line-height: 1.25 !important;
+    }
+    .text-2xl {
+        font-size: 1.25rem !important;   /* 20px */
+        line-height: 1.3 !important;
+    }
+
+    /* Tighten excessive letter-spacing on small uppercase text */
+    .text-xs[class*="tracking"] {
+        letter-spacing: 0.08em !important;
+    }
+
+    /* Make contact info more readable: reduce Cinzel on small screens */
+    .font-cinzel.text-lg {
+        font-size: 1rem !important;
+    }
+
+    /* ─── 5. WhatsApp float ─── */
+    .whatsapp-float {
+        width: 48px !important;
+        height: 48px !important;
+        bottom: 16px !important;
+        right: 16px !important;
+    }
+    .whatsapp-float svg {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    /* ─── 6. Footer compact ─── */
+    footer .py-16 {
+        padding-top: 32px !important;
+        padding-bottom: 32px !important;
+    }
+    footer .gap-16 {
+        gap: 32px !important;
+    }
+    footer .space-y-6 > * + * {
+        margin-top: 16px !important;
+    }
+    footer .space-y-4 > * + * {
+        margin-top: 12px !important;
+    }
+
+    /* ─── 7. Aspect-square images on mobile (reduce excessive height) ─── */
+    .aspect-square {
+        aspect-ratio: auto !important;
+        min-height: 250px !important;
+    }
+
+    /* ─── 8. Mobile nav improvements ─── */
+    #mobile-nav {
+        width: 280px !important;
+    }
+    #mobile-nav nav a {
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+}
+
+/* ─── Extra small screens (<= 480px) ─── */
+@media (max-width: 480px) {
+    .text-4xl {
+        font-size: 1.5rem !important;    /* 24px */
+    }
+    .text-3xl {
+        font-size: 1.25rem !important;   /* 20px */
+    }
+
+    main > section:first-child {
+        height: 220px !important;
+    }
+
+    /* Stack hero buttons vertically with less padding */
+    main > section:first-child .flex-col > a,
+    main > section:first-child .flex-col > button {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+}

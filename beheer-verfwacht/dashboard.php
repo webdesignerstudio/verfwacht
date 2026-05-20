@@ -234,29 +234,6 @@ foreach ($meldingen as $param => [$type, $tekst]) {
         .info-blok ul li { font-size: 0.82rem; color: rgba(255,255,255,0.4); padding-left: 1rem; position: relative; }
         .info-blok ul li::before { content: '→'; position: absolute; left: 0; color: var(--accent); }
 
-        /* PREVIEW */
-        .preview-tabs {
-            display: flex; gap: 0.5rem; margin-bottom: 1.5rem;
-        }
-        .preview-tab {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 8px;
-            padding: 0.55rem 1.1rem;
-            font-size: 0.82rem; font-weight: 700; font-family: inherit;
-            color: rgba(255,255,255,0.5);
-            cursor: pointer;
-            transition: all 0.2s;
-        }
-        .preview-tab:hover { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.75); }
-        .preview-tab.actief { background: color-mix(in srgb, var(--accent) 15%, transparent); border-color: color-mix(in srgb, var(--accent) 30%, transparent); color: var(--accent); }
-        .preview-frame {
-            width: 100%; height: 500px;
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 10px;
-            background: #fff;
-        }
-
         @media (max-width: 600px) {
             .form-grid { grid-template-columns: 1fr; }
             .form-group.full { grid-column: 1; }
@@ -396,22 +373,17 @@ foreach ($meldingen as $param => [$type, $tekst]) {
             </div>
         </div>
         <div class="kaart-body">
-            <?php if (empty($smtp['host'])): ?>
-                <p style="font-size:0.88rem;color:rgba(255,255,255,0.4);padding:0.5rem 0;">
-                    Sla eerst de SMTP-instellingen op voordat u de bevestigingsmail aanpast.
-                </p>
-            <?php else: ?>
             <form method="POST" action="opslaan-bevestiging.php">
                 <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($csrf) ?>">
                 <div class="form-grid">
                     <div class="form-group full">
                         <label for="bev_onderwerp">Onderwerp van de mail</label>
                         <input type="text" id="bev_onderwerp" name="bev_onderwerp"
-                               value="<?= htmlspecialchars($smtp['bev_onderwerp'] ?? ('Uw aanvraag is ontvangen — ' . ($cfg['bedrijfsnaam'] ?? ''))) ?>">
+                               value="<?= htmlspecialchars($smtp['bev_onderwerp'] ?? $cfg['bev_onderwerp'] ?? ('Uw aanvraag is ontvangen — ' . ($cfg['bedrijfsnaam'] ?? ''))) ?>">
                     </div>
                     <div class="form-group full">
                         <label for="bev_bericht">Berichttekst (na de aanhef "Beste [Naam],")</label>
-                        <textarea id="bev_bericht" name="bev_bericht"><?= htmlspecialchars($smtp['bev_bericht'] ?? 'Bedankt voor uw aanvraag! Wij nemen zo snel mogelijk contact met u op.') ?></textarea>
+                        <textarea id="bev_bericht" name="bev_bericht"><?= htmlspecialchars($smtp['bev_bericht'] ?? $cfg['bev_bericht'] ?? 'Bedankt voor uw aanvraag! Wij nemen zo snel mogelijk contact met u op.') ?></textarea>
                         <span class="hint">Dit is de openingstekst die de klant ziet. Kort en persoonlijk werkt het best.</span>
                     </div>
                 </div>
@@ -419,7 +391,6 @@ foreach ($meldingen as $param => [$type, $tekst]) {
                     <button type="submit" class="btn-groen">Bevestigingsmail opslaan</button>
                 </div>
             </form>
-            <?php endif; ?>
         </div>
     </div>
 
@@ -438,11 +409,13 @@ foreach ($meldingen as $param => [$type, $tekst]) {
             </div>
         </div>
         <div class="kaart-body">
-            <div class="preview-tabs">
-                <button type="button" class="preview-tab actief" data-type="offerte" onclick="switchPreview(this)">Offerte-mail (naar u)</button>
-                <button type="button" class="preview-tab" data-type="bevestiging" onclick="switchPreview(this)">Bevestigingsmail (naar klant)</button>
+            <p style="font-size:0.88rem;color:rgba(255,255,255,0.5);margin-bottom:1rem;">
+                Open een preview in een nieuw tabblad:
+            </p>
+            <div class="form-actions">
+                <a href="preview.php?type=offerte" target="_blank" class="btn-test">Offerte-mail bekijken ↗</a>
+                <a href="preview.php?type=bevestiging" target="_blank" class="btn-test">Bevestigingsmail bekijken ↗</a>
             </div>
-            <iframe id="preview-frame" class="preview-frame" src="preview.php?type=offerte"></iframe>
         </div>
     </div>
 
@@ -461,12 +434,6 @@ foreach ($meldingen as $param => [$type, $tekst]) {
 function togglePw() {
     const input = document.getElementById('wachtwoord');
     input.type = input.type === 'password' ? 'text' : 'password';
-}
-
-function switchPreview(tab) {
-    document.querySelectorAll('.preview-tab').forEach(t => t.classList.remove('actief'));
-    tab.classList.add('actief');
-    document.getElementById('preview-frame').src = 'preview.php?type=' + tab.dataset.type;
 }
 </script>
 </body>

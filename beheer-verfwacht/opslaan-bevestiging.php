@@ -24,9 +24,10 @@ if (file_exists($config_pad)) {
     $bestaand = include $config_pad;
 }
 
-// Als er nog geen smtp_config bestaat, kunnen we niet opslaan (SMTP is vereist)
+// Als er nog geen smtp_config bestaat, starten we met een leeg SMTP-config
+// Bevestigingsmail kan altijd worden aangepast
 if (empty($bestaand['host'])) {
-    header('Location: dashboard.php?fout=smtp_eerst'); exit;
+    $bestaand = [];
 }
 
 // Alleen bevestigingsmail-velden uit POST halen
