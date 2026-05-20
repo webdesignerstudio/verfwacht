@@ -89,3 +89,32 @@ input:focus, textarea:focus, select:focus {
     background-color: #152034 !important;
     --tw-bg-opacity: 1 !important;
 }
+
+/* Floating WhatsApp Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    background-color: #efbf69;
+    color: #422d00;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(239, 191, 105, 0.4);
+    transition: all 0.3s ease;
+    border: 2px solid rgba(239, 191, 105, 0.8);
+}
+.whatsapp-float:hover {
+    background-color: #e4be6f;
+    box-shadow: 0 6px 20px rgba(239, 191, 105, 0.6);
+    transform: translateY(-2px) scale(1.05);
+}
+.whatsapp-float svg {
+    width: 28px;
+    height: 28px;
+    fill: currentColor;
+}
