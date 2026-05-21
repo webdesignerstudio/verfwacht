@@ -46,7 +46,15 @@
             },
         }
     </script>
-    <style>body { font-family: 'Manrope', sans-serif; } .font-cinzel { font-family: 'Cinzel', serif; }</style>
+    <style>
+        body { font-family: 'Manrope', sans-serif; } 
+        .font-cinzel { font-family: 'Cinzel', serif; }
+        .before-after-container { position: relative; overflow: hidden; user-select: none; -webkit-user-select: none; }
+        .before-after-slider-bar { position: absolute; top: 0; bottom: 0; width: 2px; background-color: #efbf69; box-shadow: 0 0 12px rgba(239, 191, 105, 0.7); left: 50%; transform: translateX(-50%); z-index: 30; pointer-events: none; }
+        .before-after-handle { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 44px; height: 44px; border-radius: 50%; background: rgba(11, 22, 42, 0.85); border: 1px solid #efbf69; color: #efbf69; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 15px rgba(0, 0, 0, 0.5), 0 0 10px rgba(239, 191, 105, 0.2); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease; z-index: 40; pointer-events: none; }
+        .before-after-container:hover .before-after-handle { transform: translate(-50%, -50%) scale(1.1); box-shadow: 0 0 20px rgba(0, 0, 0, 0.6), 0 0 15px rgba(239, 191, 105, 0.4); border-color: #e8c172; }
+        .after-image-container { position: absolute; top: 0; left: 0; width: 100%; height: 100%; clip-path: inset(0 0 0 50%); pointer-events: none; }
+    </style>
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
 </head>
 <body class="bg-deep-navy-surface text-on-surface">
@@ -54,7 +62,7 @@
 <header class="fixed top-0 w-full border-b border-primary/30 header-logo-bg z-50">
     <div class="flex justify-between items-center px-6 py-4 max-w-container-max mx-auto">
         <a href="index.html" class="flex items-center gap-3">
-            <img src="images/logo.webp?v=3" alt="De Verfwacht Logo" class="h-20 w-auto">
+            <img src="images/logo.webp?v=4" alt="De Verfwacht Logo" class="h-20 w-auto">
             <span class="font-cinzel text-xl text-primary tracking-widest hidden sm:block font-semibold">De Verfwacht</span>
         </a>
         <nav class="hidden md:flex gap-8">
@@ -108,60 +116,378 @@
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- Project 1 -->
         <div class="group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500 aspect-[4/3]">
-            <img src="images/unsplash_painter_800.webp" loading="lazy" alt="Buitenschilderwerk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="images/projecten/project-1.webp" loading="lazy" alt="Exclusief Buitenschilderwerk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
-                <h3 class="font-cinzel text-lg text-white tracking-wide">Buitenschilderwerk</h3>
-                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Woning renovatie</p>
+                <h3 class="font-cinzel text-lg text-white tracking-wide">Exclusief Buitenschilderwerk</h3>
+                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Woningrenovatie Tilburg</p>
             </div>
         </div>
         <!-- Project 2 -->
         <div class="group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500 aspect-[4/3]">
-            <img src="images/unsplash_room_800.webp" loading="lazy" alt="Interieur" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="images/projecten/project-2.webp" loading="lazy" alt="Luxe Veranda Afwerking" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
-                <h3 class="font-cinzel text-lg text-white tracking-wide">Interieur Schilderwerk</h3>
-                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Woonkamer transformatie</p>
+                <h3 class="font-cinzel text-lg text-white tracking-wide">Luxe Veranda Afwerking</h3>
+                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Spiegelreflex plafond</p>
             </div>
         </div>
         <!-- Project 3 -->
         <div class="group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500 aspect-[4/3]">
-            <img src="images/unsplash_interior_800.webp" loading="lazy" alt="Restauratie" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="images/projecten/project-3.webp" loading="lazy" alt="Houtrot Reparatie" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
                 <h3 class="font-cinzel text-lg text-white tracking-wide">Houtrot Reparatie</h3>
-                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Kozijn restauratie</p>
+                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Dakkapel &amp; kozijn restauratie</p>
             </div>
         </div>
         <!-- Project 4 -->
         <div class="group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500 aspect-[4/3]">
-            <img src="images/unsplash_luxe_800.webp" loading="lazy" alt="Luxe woning" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="images/projecten/project-4.webp" loading="lazy" alt="Kleurrijk Buitenschilderwerk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
-                <h3 class="font-cinzel text-lg text-white tracking-wide">Luxe Woning</h3>
-                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Complete afwerking</p>
+                <h3 class="font-cinzel text-lg text-white tracking-wide">Kleurrijk Buitenschilderwerk</h3>
+                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Tribune make-over</p>
             </div>
         </div>
         <!-- Project 5 -->
         <div class="group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500 aspect-[4/3]">
-            <img src="images/unsplash_bedroom_800.webp" loading="lazy" alt="Behang" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="images/projecten/project-5.webp" loading="lazy" alt="Strakke Hoogglans Voordeur" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
-                <h3 class="font-cinzel text-lg text-white tracking-wide">Behangwerk</h3>
-                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Slaapkamer renovlies</p>
+                <h3 class="font-cinzel text-lg text-white tracking-wide">Hoogglans Voordeur</h3>
+                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Lakwerk &amp; afwerking</p>
             </div>
         </div>
         <!-- Project 6 -->
         <div class="group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500 aspect-[4/3]">
-            <img src="images/unsplash_kitchen_800.webp" loading="lazy" alt="Keuken" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <img src="images/projecten/project-6.webp" loading="lazy" alt="Trap &amp; Binnenschilderwerk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
             <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
             <div class="absolute bottom-0 left-0 p-6">
-                <h3 class="font-cinzel text-lg text-white tracking-wide">Keuken Schilderwerk</h3>
-                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Kleuradvies &amp; uitvoering</p>
+                <h3 class="font-cinzel text-lg text-white tracking-wide">Binnenschilderwerk</h3>
+                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Trap &amp; wandafwerking</p>
+            </div>
+        </div>
+        <!-- Project 7 -->
+        <div class="group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500 aspect-[4/3]">
+            <img src="images/projecten/project-7.webp" loading="lazy" alt="Gevelbekleding Combinatie" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
+            <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="font-cinzel text-lg text-white tracking-wide">Gevelbekleding &amp; Schilderwerk</h3>
+                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Antraciet &amp; hout combinatie</p>
+            </div>
+        </div>
+        <!-- Project 8 -->
+        <div class="group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500 aspect-[4/3]">
+            <img src="images/projecten/project-8.webp" loading="lazy" alt="Professionele Voorbereiding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
+            <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="font-cinzel text-lg text-white tracking-wide">Vakkundige Voorbereiding</h3>
+                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Stofvrij &amp; nauwkeurig afplakken</p>
+            </div>
+        </div>
+        <!-- Project 9 -->
+        <div class="group relative overflow-hidden rounded-lg border border-primary/20 hover:border-primary transition-all duration-500 aspect-[4/3]">
+            <img src="images/projecten/project-9.webp" loading="lazy" alt="Zijgevel Antraciet Schilderwerk" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-deep-navy-surface via-transparent to-transparent opacity-80"></div>
+            <div class="absolute bottom-0 left-0 p-6">
+                <h3 class="font-cinzel text-lg text-white tracking-wide">Zijgevel Afwerking</h3>
+                <p class="text-on-surface-variant text-xs font-bold uppercase tracking-[0.15em]">Antraciet &amp; verticaal hout</p>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Transformaties -->
+<section class="py-24 px-6 border-t border-primary/10 bg-navy-elevated/20">
+    <div class="max-w-container-max mx-auto">
+        <div class="text-center mb-20">
+            <h2 class="font-cinzel text-2xl md:text-3xl text-primary uppercase tracking-widest mb-2">Transformaties</h2>
+            <div class="pinstripe max-w-xs mx-auto mb-4"></div>
+            <p class="text-on-surface-variant max-w-xl mx-auto text-sm">Beweeg uw cursor of vinger over de afbeeldingen om de voorbereiding en het eindresultaat te vergelijken.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-28">
+            <!-- Text 1 -->
+            <div class="space-y-6">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary">Transformatie 01</span>
+                <h3 class="font-cinzel text-2xl md:text-3xl text-white leading-tight">Buitenschilderwerk &amp; Gevelrenovatie</h3>
+                <p class="text-on-surface-variant leading-relaxed text-sm">
+                    Bij dit project is de gehele achtergevel, inclusief de houten kolommen, daklijsten en dakkapel, getransformeerd van een verweerde witte uitstraling naar een moderne, diep antracietgrijze kleur. Dit geeft het woonhuis een eigentijds, exclusief karakter en zorgt voor jarenlange bescherming tegen weersinvloeden.
+                </p>
+                <div class="flex flex-col gap-3 text-xs md:text-sm text-on-surface-variant">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Grondige reiniging en machinaal schuren van al het houtwerk</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Reparatie van oneffenheden en aanbrengen van hechtprimer</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Dubbele aflaklaag met premium weersbestendige antracietlak</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider 1 -->
+            <div class="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-primary/20 shadow-2xl group before-after-container">
+                <!-- Before Image -->
+                <img src="images/projecten/trans-1-before.webp" class="absolute inset-0 w-full h-full object-cover pointer-events-none" alt="Achtergevel voor schilderwerk">
+                <!-- After Image (clipped) -->
+                <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none after-image-container">
+                    <img src="images/projecten/trans-1-after.webp" class="absolute inset-0 w-full h-full object-cover pointer-events-none" alt="Achtergevel na schilderwerk">
+                </div>
+                <!-- Slider Bar -->
+                <div class="before-after-slider-bar"></div>
+                <!-- Handle -->
+                <div class="before-after-handle">
+                    <span class="material-symbols-outlined text-xl select-none">swap_horiz</span>
+                </div>
+                <!-- Labels -->
+                <span class="absolute top-4 left-4 bg-deep-navy-surface/85 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded backdrop-blur-sm pointer-events-none z-30">Voor</span>
+                <span class="absolute top-4 right-4 bg-deep-navy-surface/85 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded backdrop-blur-sm pointer-events-none z-30">Na</span>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <!-- Slider 2 -->
+            <div class="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-primary/20 shadow-2xl group before-after-container lg:order-last">
+                <!-- Before Image -->
+                <img src="images/projecten/trans-2-before.webp" class="absolute inset-0 w-full h-full object-cover pointer-events-none" alt="Voordeur voor schilderwerk">
+                <!-- After Image (clipped) -->
+                <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none after-image-container">
+                    <img src="images/projecten/trans-2-after.webp" class="absolute inset-0 w-full h-full object-cover pointer-events-none" alt="Voordeur na schilderwerk">
+                </div>
+                <!-- Slider Bar -->
+                <div class="before-after-slider-bar"></div>
+                <!-- Handle -->
+                <div class="before-after-handle">
+                    <span class="material-symbols-outlined text-xl select-none">swap_horiz</span>
+                </div>
+                <!-- Labels -->
+                <span class="absolute top-4 left-4 bg-deep-navy-surface/85 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded backdrop-blur-sm pointer-events-none z-30">Voor</span>
+                <span class="absolute top-4 right-4 bg-deep-navy-surface/85 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded backdrop-blur-sm pointer-events-none z-30">Na</span>
+            </div>
+            <!-- Text 2 -->
+            <div class="space-y-6">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary">Transformatie 02</span>
+                <h3 class="font-cinzel text-2xl md:text-3xl text-white leading-tight">Exclusief Hoogglans Voordeur-Lakwerk</h3>
+                <p class="text-on-surface-variant leading-relaxed text-sm">
+                    Een perfect spiegelende voordeur is het visitekaartje van een woning en vereist minutieuze voorbereiding. De 'Voor'-foto toont de voordeur na het herstellen van de ondergrond, schuren en het aanbrengen van de grondlaag. Het eindresultaat toont de diepe, spiegelende en krasvaste hoogglansafwerking.
+                </p>
+                <div class="flex flex-col gap-3 text-xs md:text-sm text-on-surface-variant">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Minutieus plamuren, herstellen van houtrot en vlakschuren</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Aanbrengen van hoogwaardige vullende grondlak</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Stofvrij aflakken met extreme hoogglanslak voor een diepe spiegelglans</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-28">
+            <!-- Text 3 -->
+            <div class="space-y-6">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary">Transformatie 03</span>
+                <h3 class="font-cinzel text-2xl md:text-3xl text-white leading-tight">Kleurrijke Tribune Make-over</h3>
+                <p class="text-on-surface-variant leading-relaxed text-sm">
+                    Een schoolplein-tribune van verweerd, grauw beton getransformeerd naar een levendige en uitnodigende omgeving. Door de juiste keuze van heldere, weerbestendige buitenverf is het speelplein een plek geworden waar kinderen elke dag graag naartoe gaan.
+                </p>
+                <div class="flex flex-col gap-3 text-xs md:text-sm text-on-surface-variant">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Grondig reinigen en ontvetten van het betonoppervlak</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Kleuradvies en aanbrengen van betonprimer</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Meerdere lagen UV- en weerbestendige buitenverf</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider 3 -->
+            <div class="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-primary/20 shadow-2xl group before-after-container">
+                <img src="images/projecten/trans-3-before.webp" class="absolute inset-0 w-full h-full object-cover pointer-events-none" alt="Tribune voor schilderwerk">
+                <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none after-image-container">
+                    <img src="images/projecten/trans-3-after.webp" class="absolute inset-0 w-full h-full object-cover pointer-events-none" alt="Tribune na schilderwerk">
+                </div>
+                <div class="before-after-slider-bar"></div>
+                <div class="before-after-handle">
+                    <span class="material-symbols-outlined text-xl select-none">swap_horiz</span>
+                </div>
+                <span class="absolute top-4 left-4 bg-deep-navy-surface/85 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded backdrop-blur-sm pointer-events-none z-30">Voor</span>
+                <span class="absolute top-4 right-4 bg-deep-navy-surface/85 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded backdrop-blur-sm pointer-events-none z-30">Na</span>
+            </div>
+        </div>
+
+        <!-- Transformatie 04 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-28">
+            <!-- Text 4 -->
+            <div class="space-y-6">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary">Transformatie 04</span>
+                <h3 class="font-cinzel text-2xl md:text-3xl text-white leading-tight">Kozijn &amp; Houtrot Renovatie</h3>
+                <p class="text-on-surface-variant leading-relaxed text-sm">
+                    Houtrot is de grootste vijand van uw kozijnen. Bij dit project hebben we verwaarloosde en door houtrot aangetaste raamkozijnen grondig hersteld. Door het rotte hout volledig weg te frezen, te behandelen met hoogwaardige epoxy-pasta en strak af te lakken in premium zijdeglans wit, zijn de kozijnen weer als nieuw en volledig beschermd tegen de elementen.
+                </p>
+                <div class="flex flex-col gap-3 text-xs md:text-sm text-on-surface-variant">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Houtrot grondig verwijderen en frezen tot op het gezonde hout</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Behandelen met professionele epoxy houtrotvuller</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Primer en strakke aflak met premium weerbestendige lak</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider 4 -->
+            <div class="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-primary/20 shadow-2xl group before-after-container">
+                <img src="images/projecten/trans-4-before.webp" class="absolute inset-0 w-full h-full object-cover pointer-events-none" alt="Kozijn voor renovatie">
+                <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none after-image-container">
+                    <img src="images/projecten/trans-4-after.webp" class="absolute inset-0 w-full h-full object-cover pointer-events-none" alt="Kozijn na renovatie">
+                </div>
+                <div class="before-after-slider-bar"></div>
+                <div class="before-after-handle">
+                    <span class="material-symbols-outlined text-xl select-none">swap_horiz</span>
+                </div>
+                <span class="absolute top-4 left-4 bg-deep-navy-surface/85 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded backdrop-blur-sm pointer-events-none z-30">Voor</span>
+                <span class="absolute top-4 right-4 bg-deep-navy-surface/85 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded backdrop-blur-sm pointer-events-none z-30">Na</span>
+            </div>
+        </div>
+
+        <!-- Transformatie 05 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-28">
+            <!-- Text 5 -->
+            <div class="space-y-6">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary">Transformatie 05</span>
+                <h3 class="font-cinzel text-2xl md:text-3xl text-white leading-tight">Dakkapel Renovatie &amp; Kleurwijziging</h3>
+                <p class="text-on-surface-variant leading-relaxed text-sm">
+                    Een dakkapel krijgt het zwaar te verduren door zon, wind en regen. Deze dakkapel had zichtbaar last van verweerd hout en kale hoeken. We hebben het houtwerk volledig hersteld en getransformeerd van klassiek wit naar een moderne, diepe antracietkleur met een schitterende hoogglans. Een duurzame upgrade met een luxe uitstraling.
+                </p>
+                <div class="flex flex-col gap-3 text-xs md:text-sm text-on-surface-variant">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Houtreparatie en grondig machinaal schuren op hoogte</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Aanbrengen van vochtregulerende grondverf</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Aflakken in hoogglanzend antraciet voor maximale UV-bescherming</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider 5 -->
+            <div class="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-primary/20 shadow-2xl group before-after-container">
+                <img src="images/projecten/trans-5-before.webp" class="absolute inset-0 w-full h-full object-cover pointer-events-none" alt="Dakkapel voor renovatie">
+                <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none after-image-container">
+                    <img src="images/projecten/trans-5-after.webp" class="absolute inset-0 w-full h-full object-cover pointer-events-none" alt="Dakkapel na renovatie">
+                </div>
+                <div class="before-after-slider-bar"></div>
+                <div class="before-after-handle">
+                    <span class="material-symbols-outlined text-xl select-none">swap_horiz</span>
+                </div>
+                <span class="absolute top-4 left-4 bg-deep-navy-surface/85 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded backdrop-blur-sm pointer-events-none z-30">Voor</span>
+                <span class="absolute top-4 right-4 bg-deep-navy-surface/85 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded backdrop-blur-sm pointer-events-none z-30">Na</span>
+            </div>
+        </div>
+
+        <!-- Transformatie 06 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-28">
+            <!-- Text 6 -->
+            <div class="space-y-6">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary">Transformatie 06</span>
+                <h3 class="font-cinzel text-2xl md:text-3xl text-white leading-tight">Complete Gevel &amp; Kozijn Transformatie</h3>
+                <p class="text-on-surface-variant leading-relaxed text-sm">
+                    Een spectaculaire transformatie van de gehele voorgevel. Alle witte kozijnen, ramen en de voordeur zijn vakkundig omgekleurd naar een strakke, moderne antracietgrijze tint. Dit contrast met de robuuste bakstenen gevel geeft de gehele woning direct een eigentijds, exclusief en architectonisch karakter.
+                </p>
+                <div class="flex flex-col gap-3 text-xs md:text-sm text-on-surface-variant">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Volledige reiniging en ontvetten van alle gevelkozijnen</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Nauwkeurig afplakken en stofvrij voorbereiden van de ondergrond</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Professionele omkleuring met extreem duurzame buitenlak</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider 6 -->
+            <div class="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-primary/20 shadow-2xl group before-after-container">
+                <img src="images/projecten/trans-6-before.webp" class="absolute inset-0 w-full h-full object-cover pointer-events-none" alt="Gevel voor transformatie">
+                <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none after-image-container">
+                    <img src="images/projecten/trans-6-after.webp" class="absolute inset-0 w-full h-full object-cover pointer-events-none" alt="Gevel na transformatie">
+                </div>
+                <div class="before-after-slider-bar"></div>
+                <div class="before-after-handle">
+                    <span class="material-symbols-outlined text-xl select-none">swap_horiz</span>
+                </div>
+                <span class="absolute top-4 left-4 bg-deep-navy-surface/85 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded backdrop-blur-sm pointer-events-none z-30">Voor</span>
+                <span class="absolute top-4 right-4 bg-deep-navy-surface/85 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded backdrop-blur-sm pointer-events-none z-30">Na</span>
+            </div>
+        </div>
+
+        <!-- Transformatie 07 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mt-28">
+            <!-- Text 7 -->
+            <div class="space-y-6">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-primary">Transformatie 07</span>
+                <h3 class="font-cinzel text-2xl md:text-3xl text-white leading-tight">Strak Binnenschilderwerk &amp; Wandafwerking</h3>
+                <p class="text-on-surface-variant leading-relaxed text-sm">
+                    Van ruwbouw naar een sfeervolle, instapklare entree. In deze nieuwbouw-hal hebben we de kale wanden, ruwe gipsplaten en plafonds getransformeerd tot een oase van rust. De wanden zijn perfect strak afgewerkt en voorzien van hoogwaardige, matte muurverf, met prachtig sprekende houten balken als natuurlijk accent.
+                </p>
+                <div class="flex flex-col gap-3 text-xs md:text-sm text-on-surface-variant">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Nadenvullingen en gladpleisteren van gipsplaten</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Aanbrengen van hechtende muurprimer tegen zuiging</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-primary text-base md:text-lg">check_circle</span>
+                        <span>Airless spuiten en sausen van wanden en plafonds in matte design-tinten</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Slider 7 -->
+            <div class="relative aspect-[4/3] w-full overflow-hidden rounded-lg border border-primary/20 shadow-2xl group before-after-container">
+                <img src="images/projecten/trans-7-before.webp" class="absolute inset-0 w-full h-full object-cover pointer-events-none" alt="Interieur voor schilderwerk">
+                <div class="absolute inset-0 w-full h-full overflow-hidden pointer-events-none after-image-container">
+                    <img src="images/projecten/trans-7-after.webp" class="absolute inset-0 w-full h-full object-cover pointer-events-none" alt="Interieur na schilderwerk">
+                </div>
+                <div class="before-after-slider-bar"></div>
+                <div class="before-after-handle">
+                    <span class="material-symbols-outlined text-xl select-none">swap_horiz</span>
+                </div>
+                <span class="absolute top-4 left-4 bg-deep-navy-surface/85 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded backdrop-blur-sm pointer-events-none z-30">Voor</span>
+                <span class="absolute top-4 right-4 bg-deep-navy-surface/85 border border-primary/20 text-primary text-[10px] font-bold uppercase tracking-[0.2em] px-3 py-1.5 rounded backdrop-blur-sm pointer-events-none z-30">Na</span>
+            </div>
+        </div>
+    </div>
+</section>
+
 
 <!-- CTA -->
 <section class="py-24 px-6 max-w-container-max mx-auto text-center">
@@ -182,7 +508,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 gap-16 px-6 py-16 max-w-container-max mx-auto">
         <div class="space-y-6">
             <div class="flex items-center gap-3">
-                <img src="images/logo.webp?v=3" alt="De Verfwacht" class="h-14 w-auto">
+                <img src="images/logo.webp?v=4" alt="De Verfwacht" class="h-14 w-auto">
                 <span class="font-cinzel text-xl text-primary tracking-widest font-semibold">De Verfwacht</span>
             </div>
             <p class="text-on-surface-variant text-sm leading-relaxed">
@@ -227,6 +553,49 @@
             document.getElementById('mobile-nav').classList.remove('mobile-nav-open');
             document.body.style.overflow = '';
         });
+    });
+
+    // Before & After Sliders
+    document.querySelectorAll('.before-after-container').forEach(container => {
+        const afterImage = container.querySelector('.after-image-container');
+        const handle = container.querySelector('.before-after-handle');
+        const sliderBar = container.querySelector('.before-after-slider-bar');
+        
+        const updateSlider = (clientX) => {
+            const rect = container.getBoundingClientRect();
+            const x = clientX - rect.left;
+            let percentage = (x / rect.width) * 100;
+            
+            // Constrain between 0% and 100%
+            percentage = Math.max(0, Math.min(percentage, 100));
+            
+            // Apply positioning and clip-path
+            sliderBar.style.left = `${percentage}%`;
+            handle.style.left = `${percentage}%`;
+            afterImage.style.clipPath = `inset(0 0 0 ${percentage}%)`;
+        };
+        
+        const handleMove = (e) => {
+            if (e.touches && e.touches.length > 0) {
+                updateSlider(e.touches[0].clientX);
+            } else {
+                updateSlider(e.clientX);
+            }
+        };
+        
+        // Track mouse and touch movements
+        container.addEventListener('mousemove', handleMove);
+        container.addEventListener('touchmove', handleMove, { passive: true });
+        
+        // Support tap/click to jump to position
+        container.addEventListener('mousedown', (e) => {
+            updateSlider(e.clientX);
+        });
+        container.addEventListener('touchstart', (e) => {
+            if (e.touches && e.touches.length > 0) {
+                updateSlider(e.touches[0].clientX);
+            }
+        }, { passive: true });
     });
 </script>
 

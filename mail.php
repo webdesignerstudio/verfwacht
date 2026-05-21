@@ -174,8 +174,8 @@ if (!empty($dienst) && ($cfg['veld_dienst'] ?? true)) {
     $dienst_label = $diensten[$dienst] ?? ($dienst ?: 'Niet opgegeven');
 }
 
-$ontvanger = $smtp['ontvanger'] ?? ($cfg['email_fallback'] ?? '');
-$bedrijf   = $cfg['bedrijfsnaam'] ?? 'Website';
+$ontvanger = !empty($smtp['ontvanger']) ? $smtp['ontvanger'] : ($cfg['email_fallback'] ?? '');
+$bedrijf   = !empty($cfg['bedrijfsnaam']) ? $cfg['bedrijfsnaam'] : 'Website';
 $onderwerp = 'Nieuwe aanvraag via website — ' . $naam;
 
 // === VERSTUREN ===
@@ -209,8 +209,8 @@ $ip_data['count']++;
 
 // === BEVESTIGINGSMAIL NAAR BEZOEKER ===
 if ($ok) {
-    $bev_onderwerp = $smtp['bev_onderwerp'] ?? ('Uw aanvraag is ontvangen — ' . $bedrijf);
-    $bev_bericht   = $smtp['bev_bericht']   ?? 'Bedankt voor uw aanvraag! Wij nemen zo snel mogelijk contact met u op.';
+    $bev_onderwerp = !empty($smtp['bev_onderwerp']) ? $smtp['bev_onderwerp'] : ('Uw aanvraag is ontvangen — ' . $bedrijf);
+    $bev_bericht   = !empty($smtp['bev_bericht'])   ? $smtp['bev_bericht']   : 'Bedankt voor uw aanvraag! Wij nemen zo snel mogelijk contact met u op.';
 
     if ($fallback) {
         $bev_inhoud  = "Beste {$naam},\n\n{$bev_bericht}\n\n";

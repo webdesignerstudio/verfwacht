@@ -38,7 +38,7 @@ function smtp_verstuur(
     $poort     = intval($smtp['poort'] ?? 465);
     $gebruiker = $smtp['gebruiker'] ?? '';
     $wachtwoord= $smtp['wachtwoord']?? '';
-    $afzender  = $smtp['afzender']  ?? 'Website';
+    $afzender  = !empty($smtp['afzender']) ? $smtp['afzender'] : 'Website';
     $encryptie = $smtp['encryptie'] ?? ($poort === 465 ? 'ssl' : 'tls');
     $mailer_id = $smtp['mailer_id'] ?? 'WebMail/2.0';
 
