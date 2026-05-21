@@ -1,2 +1,4 @@
 User-agent: *
 Disallow: /beheer-verfwacht/
+
+Sitemap: https://deverfwacht.nl/sitemap.xml
