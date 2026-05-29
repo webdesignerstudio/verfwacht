@@ -1,0 +1,33 @@
+<?php
+return [
+    'bedrijfsnaam'   => 'De Verfwacht',
+    'telefoon'       => '06 474 04 888',
+    'email_fallback' => 'info@deverfwacht.nl',
+    'locatie'        => 'Tilburg',
+    'website_url'    => 'https://deverfwacht.nl',
+    'kleur_primair'  => '#efbf69',
+    'kleur_header_bg'=> '#121414',
+    'kleur_header_fg'=> '#e2e2e2',
+    'kleur_tel_fg'   => '#efbf69',
+    'dash_kleur'     => '#efbf69',
+    'beheer_map'     => 'beheer-verfwacht',
+    'beheer_hash'    => '$2y$12$r0FhVL1U/AOcMbv.DUL6XO/XUES0oMlvDnMc4jZl.ZPeKhVxSZZiW',
+    'veld_telefoon'  => true,
+    'veld_dienst'    => true,
+    'veld_bericht'   => true,
+    'diensten'       => [
+        'Binnenschilderwerk',
+        'Buitenschilderwerk',
+        'Behangwerk',
+        'Texwerk',
+        'Houtrot reparatie',
+        'Glaszetten',
+        'Vloercoating',
+        'Kitwerk',
+        'Overig',
+    ],
+    'mailer_id'      => 'WebMail/2.0',
+    // Standaard bevestigingsmail teksten
+    'bev_onderwerp'  => 'Uw aanvraag is ontvangen — De Verfwacht Schilderwerken',
+    'bev_bericht'    => 'Bedankt voor uw aanvraag! Wij nemen zo snel mogelijk contact met u op.',
+];
